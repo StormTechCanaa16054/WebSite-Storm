@@ -1,6 +1,6 @@
 // src/App.tsx
 import React from 'react';
-import Team from './components/Team';
+
 import fll from './assets/FLL.png';
 const App: React.FC = () => {
   return (
