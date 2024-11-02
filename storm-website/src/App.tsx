@@ -1,14 +1,14 @@
-// src/App.tsx
-import React from 'react';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "./styles/global.css";
 
-import fll from './assets/FLL.png';
-const App: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-white flex items-center justify-center">
-      fernando
-      <img src={fll}/>
-    </div>
-  );
-};
+import { RouterProvider } from "react-router-dom";
+import Routes from "./routes";
+
+function App() {
+  return <RouterProvider router={Routes} />;
+}
 
 export default App;
