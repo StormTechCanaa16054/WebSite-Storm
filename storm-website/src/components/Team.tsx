@@ -14,7 +14,7 @@ const Team: React.FC = () => {
       <h1 className="text-3xl font-bold text-primary text-center mb-4">
         STORMTECH #16054
       </h1>
-      <h2 className="text-lg font-semibold text-primary text-center mb-6">
+      <h2 className=" text text-lg font-semibold text-primary text-center mb-6">
         TIME 24/25:
       </h2>
       <div className="grid grid-cols-3 gap-6">
