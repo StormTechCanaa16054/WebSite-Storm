@@ -1,14 +1,10 @@
 // src/App.tsx
-import React from 'react';
+import Nav from './components/navbar/Nav';
+function App() {
 
-import fll from './assets/FLL.png';
-const App: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-white flex items-center justify-center">
-      fernando
-      <img src={fll}/>
-    </div>
-  );
+return (
+  < Nav/>
+
+);
 };
-
 export default App;
