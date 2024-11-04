@@ -1,17 +1,19 @@
-import './global.css';
 import logostorm from "./foto-storm.png";
-import Youtube from 'react-youtube';
+import Youtube from "react-youtube";
 
-export default function App() {
+export default function FtcPage() {
   return (
-    <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: `url(${logostorm})` }}>
+    <div
+      className="relative h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${logostorm})` }}
+    >
       <div className="absolute inset-0 bg-black bg-opacity-100"></div>
       <div className="relative z-10 h-full p-6 flex flex-col py-40">
         <h1 className="text-4x1 md:text-8xl text-roxo font-black">
           FIRST Tech Challenge
         </h1>
-        <div className='flex mt-20 gap-7'>
-          <Youtube videoId='zSTSgdeaSRM' />
+        <div className="flex mt-20 gap-7">
+          <Youtube videoId="zSTSgdeaSRM" />
           <h1 className="text-3xl font-black text-left">
             FIRST Tech Challenge, anteriormente conhecido <br />
             como FIRST Vex Challenge, é uma competição de <br />
