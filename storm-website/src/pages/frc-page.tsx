@@ -1,6 +1,6 @@
-import fotoinfinity from "./foto-infinity.png";
+import fotoinfinity from "../assets/foto-infinity.png";
 import Youtube from "react-youtube";
-import logoinfinity from "./logo-infinity.png";
+import logoinfinity from "../assets/logo-infinity.png";
 
 export default function FrcPage() {
   return (

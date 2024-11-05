@@ -1,6 +1,6 @@
-import fotofgc from "./foto-fgc.png";
+import fotofgc from "../assets/foto-fgc.png";
 import Youtube from "react-youtube";
-import logolife from "./logo-fgc.png";
+import logofgc from "../assets/logo-fgc.png";
 
 export default function FgcPage() {
   return (
@@ -14,10 +14,10 @@ export default function FgcPage() {
           <h1 className="md:text-8xl text-roxo font-black">
             FIRST Global Challenge
           </h1>
-          <img className="" src={logolife} />
+          <img className="" src={logofgc} />
         </div>
         <div className="flex mt-8 gap-7">
-          <Youtube videoId="https://youtu.be/9keeDyFxzY4?si=Mgd_ngQR4FVTByZ1" />
+          <Youtube videoId="" />
           <h1 className="text-3xl font-black text-left">
             O FIRST Global Challenge é uma competição anual de <br />
             robótica organizada pela International First Committee <br />

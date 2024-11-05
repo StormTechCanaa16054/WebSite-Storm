@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import { lazy } from "react";
 
-const Homepage = lazy(() => import("../pages/Homepage"));
+const Homepage = lazy(() => import("../pages/Home/homepage"));
 const FllPage = lazy(() => import("../pages/fll-page"));
 const FtcPage = lazy(() => import("../pages/ftc-page"));
 const FrcPage = lazy(() => import("../pages/frc-page"));

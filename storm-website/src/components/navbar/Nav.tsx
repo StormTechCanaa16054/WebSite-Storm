@@ -1,24 +1,34 @@
-import pantera from './assets/kira-roxa.png';
-import './global.css';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import pantera from "../../assets/kiraRoxa.svg";
 
- export default function Nav() {
+export default function Navbar() {
   return (
-    <nav>
+    <div className="py-4 pl-7 pr-20">
       <div className="flex justify-between items-center">
-        <div className="flex items-center">
-          <img className="kira-item ml-7 mt-5" src={pantera} alt="Kira" />
+        <div>
+          <img src={pantera} alt="Logo" className="w-16 h-auto" />
         </div>
-        <ul className="text-4xl flex gap-10 text-roxo font-black mr-32">
-          <li className="border-dashed border-purple-600 hover:border-b-2 hover:border-solid hover:border-purple-800">HOME</li>
-          <li className="border-dashed border-purple-600 hover:border-b-2 hover:border-solid hover:border-purple-800">FIRST</li>
-          <li className="border-dashed border-purple-600 hover:border-b-2 hover:border-solid hover:border-purple-800">ABOUT US</li>
-          <li className="border-dashed border-purple-600 hover:border-b-2 hover:border-solid hover:border-purple-800">CONTACT</li>
-          <li className="border-dashed border-purple-600 hover:border-b-2 hover:border-solid hover:border-purple-800">MENTORSHIP</li>
-        </ul>
+        <div className="flex space-x-8 font-black text-roxo">
+          <button className="hover:border-b-2 border-roxo transition-all duration-200"> 
+            HOME
+          </button>
+
+          <button className="hover:border-b-2 border-roxo transition-all duration-200">
+            FIRST
+          </button>
+
+          <button className="hover:border-b-2 border-roxo transition-all duration-200">
+            ABOUT US
+          </button>
+
+          <button className="hover:border-b-2 border-roxo transition-all duration-200">
+            CONTACT
+          </button>
+
+          <button className="hover:border-b-2 border-roxo transition-all duration-200">
+            MENTORSHIP
+          </button>
+        </div>
       </div>
-    </nav>
+    </div>
   );
 }
-

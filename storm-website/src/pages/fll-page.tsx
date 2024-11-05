@@ -1,6 +1,6 @@
-import fotolife from "./FLL.png";
+import fotolife from "../assets/FLL.png";
 import Youtube from "react-youtube";
-import logolife from "./Logo-LIFE 1.png";
+import logolife from "../assets/Logo-LIFE 1.png";
 
 export default function FllPage() {
   return (

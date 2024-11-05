@@ -1,0 +1,51 @@
+.toggler {
+    width: 40px;
+    height: 5px;
+    position: relative;
+    background: #7600C0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .toggler::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 5px;
+    background: #7600C0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+    transform: translateY(-14px);
+  }
+  
+  .toggler::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 5px;
+    background: #7600C0;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(14px);
+  }
+  
+  button.menuAberto .toggler {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  
+  button.menuAberto .toggler::before {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+  
+  button.menuAberto .toggler::after {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  

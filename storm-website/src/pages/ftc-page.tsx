@@ -1,4 +1,5 @@
-import logostorm from "./foto-storm.png";
+import logostorm from "../assets/foto-storm.png";
+
 import Youtube from "react-youtube";
 
 export default function FtcPage() {

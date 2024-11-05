@@ -1,9 +1,21 @@
-import videostorm from "../assets/storm-thumb.mp4";
+import videostorm from "../../assets/storm-thumb.mp4";
 import YouTube from "react-youtube";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useState, useEffect } from "react";
 import { Pagination, Autoplay } from "swiper/modules";
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/Navbar";
+
+import logoFanta from '../../assets/fantaIcon.svg';
+import logoJohndeere from '../../assets/johndeereIcon.svg';
+import logoEbepos from '../../assets/ebeposIcon.svg';
+import logoAerofiber from '../../assets/aeroIcon.svg';
+import logoSenai from '../../assets/senaiIcon.svg';
+import logoMarceneiro from '../../assets/marceneiroIcon.svg';
+import logoDiesel from '../../assets/dieselIcon.svg';
+import logoRockwell from '../../assets/rockwellIcon.svg';
+import logoSesi from '../../assets/sesiIcon.svg';
+
+
 
 export default function Homepage() {
   const [slidesPerView, setSlidePerView] = useState(4);
@@ -11,45 +23,42 @@ export default function Homepage() {
   const data = [
     {
       id: "1",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQk1l1uDCe9rcI3bbwOCKEHSL_ynTY3mdpUQ&s",
+      image: logoSesi,
     },
     {
       id: "2",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQk1l1uDCe9rcI3bbwOCKEHSL_ynTY3mdpUQ&s",
+      image: logoJohndeere,
     },
     {
       id: "3",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQk1l1uDCe9rcI3bbwOCKEHSL_ynTY3mdpUQ&s",
+      image: logoFanta,
     },
     {
       id: "4",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQk1l1uDCe9rcI3bbwOCKEHSL_ynTY3mdpUQ&s",
+      image: logoSenai,
     },
     {
       id: "5",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQk1l1uDCe9rcI3bbwOCKEHSL_ynTY3mdpUQ&s",
+      image: logoAerofiber,
     },
     {
       id: "6",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQk1l1uDCe9rcI3bbwOCKEHSL_ynTY3mdpUQ&s",
+      image: logoMarceneiro,
     },
     {
       id: "7",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQk1l1uDCe9rcI3bbwOCKEHSL_ynTY3mdpUQ&s",
+      image: logoDiesel,
     },
     {
       id: "8",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQk1l1uDCe9rcI3bbwOCKEHSL_ynTY3mdpUQ&s",
+      image: logoRockwell, 
     },
+    {
+      id: "9",
+      image: logoEbepos,
+    }
   ];
+  
 
   useEffect(() => {
     function handleResize() {
@@ -76,7 +85,7 @@ export default function Homepage() {
           <source src={videostorm} type="video/mp4" />
         </video>
       </section>
-      <div className="my-10 bg-white w-full z-10">
+      <div>
         <h1 className="text-9xl w-full text-center font-bold bg-white">
           IN THE <span className="text-roxo">NEWS!</span>
         </h1>
