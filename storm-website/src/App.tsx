@@ -8,7 +8,6 @@ import Routes from "./routes";
 import './styles/global.css';
 function App() {
   <Navbar />
-  
   return <RouterProvider router={Routes} />;
 }
 export default App;

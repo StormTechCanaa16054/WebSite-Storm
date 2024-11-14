@@ -10,6 +10,8 @@ const FllPage = lazy(() => import("../pages/fll-page"));
 const FtcPage = lazy(() => import("../pages/ftc-page"));
 const FrcPage = lazy(() => import("../pages/frc-page"));
 const FgcPage = lazy(() => import("../pages/fgc-pages"));
+const FirstPage = lazy(() => import("../pages/first-page"));
+const AboutUsPageWrapper = lazy(() => import("../pages/AboutUsPage"));
 
 const Routes = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +21,8 @@ const Routes = createBrowserRouter(
       <Route path="ftc" element={<FtcPage />} />
       <Route path="frc" element={<FrcPage />} />
       <Route path="fgc" element={<FgcPage />} />
+      <Route path="first" element={<FirstPage />} />
+      <Route path="competidores" element={<AboutUsPageWrapper />} />
     </Route>
   )
 );

@@ -1,8 +1,8 @@
 import fotolife from "../assets/FLL.png";
 import Youtube from "react-youtube";
-import logolife from "../assets/Logo-LIFE 1.png";
+import logolife from "../assets/Logo-LIFE.png";
 
-export default function FllPage() {
+function FllPage() {
   return (
     <div
       className="relative h-screen bg-cover bg-center"
@@ -14,10 +14,10 @@ export default function FllPage() {
           <h1 className="md:text-7xl text-roxo font-black">
             FIRST Lego League Challenge
           </h1>
-          <img className="" src={logolife} />
+          <img className="w-52 md:w-52" src={logolife} />
         </div>
         <div className="flex mt-8 gap-7">
-          <Youtube videoId="https://youtu.be/9keeDyFxzY4?si=Mgd_ngQR4FVTByZ1" />
+          <Youtube videoId="J5u-2q_K3O0" />
           <h1 className="text-3xl font-black text-left">
             FIRST LEGO League Challenge, também conhecida <br />
             como FIRST LEGO League ou pela sigla FLL, é um <br />
@@ -31,3 +31,5 @@ export default function FllPage() {
     </div>
   );
 }
+
+export default FllPage;

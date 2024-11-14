@@ -17,7 +17,7 @@ export default function FrcPage() {
           <img className="" src={logoinfinity} />
         </div>
         <div className="flex mt-12 gap-7">
-          <Youtube videoId="https://youtu.be/9keeDyFxzY4?si=Mgd_ngQR4FVTByZ1" />
+          <Youtube videoId="9keeDyFxzY4" />
           <h1 className="text-3xl font-black text-left">
             FIRST Robotics Competition (FRC) é uma competição <br />
             de robótica internacional com foco em alunos do <br />

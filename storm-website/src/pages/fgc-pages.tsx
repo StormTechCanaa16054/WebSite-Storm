@@ -1,32 +1,40 @@
-import fotofgc from "../assets/foto-fgc.png";
+import React from "react";
 import Youtube from "react-youtube";
+import fotofgc from "../assets/foto-fgc.png";
 import logofgc from "../assets/logo-fgc.png";
 
-export default function FgcPage() {
+const FgcPage: React.FC = () => {
   return (
     <div
       className="relative h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${fotofgc})` }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-100"></div>
-      <div className="ml-10 relative z-10 h-full p-6 flex flex-col py-40">
-        <div className="flex items-center gap-10">
-          <h1 className="md:text-8xl text-roxo font-black">
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+      <div className="relative z-10 h-full flex flex-col justify-center items-start p-6">
+        
+        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+          <h1 className="text-4xl md:text-8xl text-purple-700 font-extrabold">
             FIRST Global Challenge
           </h1>
-          <img className="" src={logofgc} />
+          <img src={logofgc} alt="Logo FGC" className="w-20 md:w-40" />
         </div>
-        <div className="flex mt-8 gap-7">
-          <Youtube videoId="" />
-          <h1 className="text-3xl font-black text-left">
-            O FIRST Global Challenge é uma competição anual de <br />
-            robótica organizada pela International First Committee <br />
-            Association. Promove a educação e carreiras STEM para <br />
-            jovens e foi criada por Dean Kamen em 2016 como uma <br />
-            expansão da FIRST, uma organização com objetivos semelhantes.
-          </h1>
+
+        <div className="flex md:flex-row mt-8 gap-40">
+          <div className="flex-1 max-w-lg">
+            <Youtube videoId="VoT_eVi7vQ0" />
+          </div>
+          <p className="text-lg md:text-3xl font-black text-left max-w-xl">
+            O FIRST Global Challenge é uma competição anual de robótica
+            organizada pela International First Committee Association. Promove a
+            educação e carreiras STEM para jovens e foi criada por Dean Kamen em
+            2016 como uma expansão da FIRST, uma organização com objetivos
+            semelhantes.
+          </p>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default FgcPage;

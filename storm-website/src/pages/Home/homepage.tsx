@@ -15,8 +15,6 @@ import logoDiesel from '../../assets/dieselIcon.svg';
 import logoRockwell from '../../assets/rockwellIcon.svg';
 import logoSesi from '../../assets/sesiIcon.svg';
 
-
-
 export default function Homepage() {
   const [slidesPerView, setSlidePerView] = useState(4);
 
@@ -44,10 +42,6 @@ export default function Homepage() {
     {
       id: "6",
       image: logoMarceneiro,
-    },
-    {
-      id: "7",
-      image: logoDiesel,
     },
     {
       id: "8",
