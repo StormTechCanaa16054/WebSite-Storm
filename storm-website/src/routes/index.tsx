@@ -5,17 +5,15 @@ import {
 } from "react-router-dom";
 import { lazy } from "react";
 
-const Homepage = lazy(() => import("../pages/Home/homepage"));
-const FllPage = lazy(() => import("../pages/fll-page"));
-const FtcPage = lazy(() => import("../pages/ftc-page"));
-const FrcPage = lazy(() => import("../pages/frc-page"));
-const FgcPage = lazy(() => import("../pages/fgc-pages"));
-const FirstPage = lazy(() => import("../pages/first-page"));
+const Homepage = lazy(() => import("../pages/Homepage"));
+const FllPage = lazy(() => import("../pages/FIRST/fll-page"));
+const FtcPage = lazy(() => import("../pages/FIRST/ftc-page"));
+const FrcPage = lazy(() => import("../pages/FIRST/frc-page"));
+const FgcPage = lazy(() => import("../pages/FIRST/fgc-pages"));
+const FirstPage = lazy(() => import("../pages/FIRST/first-page"));
 const AboutUsPage = lazy(() => import("../pages/AboutUsPage"));
 const ContatoPage = lazy(() => import("../pages/ContatoPage"));
-const MentorShipPage = lazy(() => import("../pages/MentorShipPage"));
-
-
+const ResourcePage = lazy(() => import("../pages/ResourcePage"));
 
 const Routes = createBrowserRouter(
   createRoutesFromElements(
@@ -28,7 +26,7 @@ const Routes = createBrowserRouter(
       <Route path="first" element={<FirstPage />} />
       <Route path="competidores" element={<AboutUsPage />} />
       <Route path="contato" element={<ContatoPage />} />
-      <Route path="mentorsh" element={<MentorShipPage/>}/>
+      <Route path="resource" element={<ResourcePage />}/>
       
     </Route>
   )

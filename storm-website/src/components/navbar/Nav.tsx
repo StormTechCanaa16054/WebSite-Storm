@@ -1,4 +1,4 @@
-import pantera from "../../assets/kiraRoxa.svg";
+import pantera from "../../assets//Icons/kiraRoxa.svg";
 
 export default function Navbar() {
   return (
@@ -25,7 +25,7 @@ export default function Navbar() {
           </button>
 
           <button className="hover:border-b-2 border-roxo transition-all duration-200">
-            MENTORSHIP
+            RESOURCE
           </button>
         </div>
       </div>

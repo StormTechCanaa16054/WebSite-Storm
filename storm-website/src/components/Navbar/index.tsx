@@ -1,4 +1,4 @@
-import pantera from "../../assets/kiraRoxa.svg";
+import pantera from "../../assets/Icons/kiraRoxa.svg";
 import NavLink from "./NavLink";
 import clsx from "clsx";
 import { useState } from "react";
@@ -25,17 +25,16 @@ export default function Navbar() {
           )}
         >
           <NavLink texto="HOME" href="/" />
-
           <li className="relative">
             <button
               onClick={toggleDropdown}
               className="text-roxo font-black text-4xl hover:border-b-4 border-roxo transition-all duration-200"
             >
-              FIRST
+              {/* FIRST */}
             </button>
             {isDropdownOpen && (
               <ul className="text-2xl absolute top-full mt-2 border-2 border-roxo rounded shadow-lg hover:border-b-4 transition-all duration-200">
-                <li><NavLink texto="FIRST" href="/first" /></li>
+                {/* <li><NavLink texto="FIRST" href="/first" /></li> */}
                 <li><NavLink texto="FLL" href="/fll" /></li>
                 <li><NavLink texto="FTC" href="/ftc" /></li>
                 <li><NavLink texto="FGB" href="/fgc" /></li>
@@ -43,9 +42,9 @@ export default function Navbar() {
               </ul>
             )}
           </li>
-          <NavLink texto="ABOUT US" href="/about" />
-          <NavLink texto="CONTACT" href="/contact" />
-          <NavLink texto="MENTORSHIP" href="/mentor" />
+          <NavLink texto="ABOUT US" href="/competidores" />
+          <NavLink texto="CONTACT" href="/contato" />
+          <NavLink texto="RESOURCE" href="/resource" />
         </ul>
       </div>
     </nav>
