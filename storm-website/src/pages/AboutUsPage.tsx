@@ -1,5 +1,6 @@
 import awardIcon from "../assets/TrofeuSt.svg";
 import TeamMember from "../components/TeamMember";
+import TimeLine from "../components/TimelineItem";
 
 import ArthurIcon from "../assets/Members/Foto Artur.png";
 import FernandoQIcon from "../assets/Members/Foto Fernando.png";
@@ -14,20 +15,15 @@ import JoaoIcon from "../assets/Members/Foto Fernando.png";
 import FernandoMIcon from "../assets/Members/Foto Fernando_tec.png";
 import SofiaIcon from "../assets/Members/Foto sofia.png";
 
-// import VictorIcon from "../assets/Members/ArthurIcon.png";
-// import MiguelIcon from "../assets/Members/ArthurIcon.png";
-
-import TimeLine from "../components/TimelineItem";
 import RoverRuckus from "../assets/Seasons/RoverRuckus.png";
 import SkyStone from "../assets/Seasons/SkyStone.png";
 import UltimateGoal from "../assets//Seasons/UltimateGoal.png";
-import FreightFrenzy from "../assets/Seasons/FreighFrenzy.png"
+import FreightFrenzy from "../assets/Seasons/FreighFrenzy.png";
 import PowerPlay from "../assets/Seasons/PowerPlay.png";
 import CenterStage from "../assets/Seasons/CenterStage.png";
 import IntoTheDeep from "../assets/Seasons/IntoTheDeep.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useState, useEffect } from "react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -38,17 +34,10 @@ interface Member {
   photo: string;
 }
 
-interface Award {
-  title: string;
-  count: number;
-}
-
 interface Season {
   seasonName: string;
   photo: string;
 }
-
-
 
 const seasons: Season[] = [
   { seasonName: "ROVER RUCKUS (2018/19)", photo: RoverRuckus },
@@ -60,105 +49,84 @@ const seasons: Season[] = [
   { seasonName: "INTO THE DEEP (2024/25)", photo: IntoTheDeep }
 ];
 
-const teamMembers: Member[] = [
-
-  { name: "Diana Pinho", role: "Technical TA", photo: DianaIcon },
-  { name: "Fernando Monteiro", role: "Technical MCI", photo: FernandoMIcon },
-
-  { name: "Fernando Quintanilha", role: "Programmer", photo: FernandoQIcon },
-  { name: "Arthur Oliveira", role: "Designer", photo: ArthurIcon },
-  { name: "Artur Alves", role: "Enginner", photo: ArturIcon },
-  { name: "Gabriel Melo", role: "Outreach", photo: GabrielIcon },
-  { name: "Isabella Rocha", role: "Designer", photo: IsabelaIcon },
-  { name: "Gaspar Soudré", role: "Enginner", photo: GasparIcon },
-  { name: "Beatriz Ferreira", role: "Thinker", photo: BeatrizIcon },
-  { name: "Sofia Califani", role: "Business", photo: SofiaIcon },
-  { name: "João Antônio", role: "CAD", photo: JoaoIcon },
-  { name: "Davi Lemos", role: "CAD", photo: DaviIcon },
-
-  // { name: "Diego Augusto", role: "Mentor", photo: DaviIcon },
-  // { name: "Miguel Ramos", role: "Mentor", photo: MiguelIcon },
-  // { name: "Victor Morais", role: "Mentor", photo: VictorIcon },
-  // { name: "Rafael Castro", role: "Mentor", photo: VictorIcon },
-  // { name: "João Victor Soudré", role: "Mentor", photo: DaviIcon },
+const technicalTeam: Member[] = [
+  { name: "Diana Pinho", role: "Técnica TA", photo: DianaIcon },
+  { name: "Fernando Monteiro", role: "Técnico MCI", photo: FernandoMIcon },
 ];
 
-const awards: Award[] = [
-  { title: "Inspire AWARD", count: 10 },
-  { title: "Aliança Finalista", count: 10 },
-  { title: "Top Ranked Team Award", count: 10 },
-  { title: "Think Award", count: 10 },
-  { title: "Aliança Vencedora", count: 10 },
-  { title: "Motivate Award", count: 10 },
-  { title: "Control Award", count: 10 },
-  { title: "Compass Award", count: 10 },
+const teamMembers: Member[] = [
+  { name: "Arthur Oliveira", role: "Designer", photo: ArthurIcon },
+  { name: "Artur Alves", role: "Engenheiro", photo: ArturIcon },
+  { name: "Beatriz Ferreira", role: "Thinker", photo: BeatrizIcon },
+  { name: "Davi Lemos", role: "CAD", photo: DaviIcon },
+  { name: "Fernando Quintanilha", role: "Programador", photo: FernandoQIcon },
+  { name: "Gabriel Melo", role: "Outreach", photo: GabrielIcon },
+  { name: "Gaspar Soudré", role: "Engenheiro", photo: GasparIcon },
+  { name: "Isabella Rocha", role: "Designer", photo: IsabelaIcon },
+  { name: "João Antônio", role: "CAD", photo: JoaoIcon },
+  { name: "Sofia Califani", role: "Negócios", photo: SofiaIcon },
+
 ];
 
 function AboutUsPage() {
-
-  const [slidesPerView, setSlidesPerView] = useState(3);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setSlidesPerView(1);
-      } else if (window.innerWidth < 1024) {
-        setSlidesPerView(2);
-      } else {
-        setSlidesPerView(3);
-      }
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <nav>
-      <div className="flex flex-col justify-start items-start py-8 ml-28 gap-2">
-        <h1 className="text-8xl font-black text-roxo font-montserrat">STORMTECH #16054</h1>
-        <span className="bg-roxo text-white rounded-4xl border-8 border-roxo font-montserrat text-4xl">
+      <div className="flex flex-col justify-center items-center py-8 gap-4">
+        <h1 className="text-8xl font-black text-roxo font-montserrat text-center">
+          STORMTECH #16054
+        </h1>
+        <span className="bg-roxo text-white rounded-4xl border-8 border-roxo font-montserrat text-4xl px-6 py-2">
           TIME 24/25:
         </span>
       </div>
 
-      <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0 justify-center place-items-center mt-6 w-full max-w-full">
-        {teamMembers.map((member, index) => (
-          <TeamMember key={index} name={member.name} role={member.role} photo={member.photo} />
-        ))}
-      </div>
+      {/* Técnicos */}
+      <section className="w-full max-w-screen-lg mx-auto mb-12 text-center">
+        <h2 className="text-4xl text-white font-bold mb-6">Técnicos</h2>
+        <div className="flex justify-center flex-wrap gap-8">
+          {technicalTeam.map((member, index) => (
+            <div
+              key={index}
+              className="bg-gray-900 rounded-xl p-6 shadow-lg flex flex-col items-center w-64"
+            >
+              <img
+                src={member.photo}
+                alt={member.name}
+                className="w-28 h-28 rounded-full shadow-md object-cover mb-4"
+              />
+              <h3 className="text-white font-bold text-xl">{member.name}</h3>
+              <p className="text-purple-400 text-lg font-medium">{member.role}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      <div className="bg-roxo text-white p-10">
+      <section className="w-full max-w-screen-lg mx-auto text-center">
+        <h2 className="text-4xl text-white font-bold mb-6">Equipe</h2>
+        <div className="flex justify-center flex-wrap gap-8">
+          {teamMembers.map((member, index) => (
+            <TeamMember key={index} name={member.name} role={member.role} photo={member.photo} />
+          ))}
+        </div>
+      </section>
+
+      <div className="bg-roxo text-white p-10 mt-16">
         <h1 className="font-black text-8xl text-center mb-10">LINHA DO TEMPO:</h1>
 
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={20}
-          slidesPerView={slidesPerView}
+          slidesPerView={3}
           loop={true}
           autoplay={{ delay: 2500, disableOnInteraction: false }}
-          className="w-full max-w-6xl"
+          className="w-full max-w-6xl mx-auto"
         >
           {seasons.map((season, index) => (
-            <SwiperSlide key={index} className="">
+            <SwiperSlide key={index}>
               <TimeLine photo={season.photo} seasonName={season.seasonName} />
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
-
-      <div className="flex justify-start items-start gap-16 bg-roxo text-white font-montserrat font-bold text-4xl">
-        <div className="mt-20 ml-14">
-          <ul className="columns-2 my-6">
-            {awards.map((award, index) => (
-              <li key={index} className="p-3">
-                {award.count}x {award.title}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <img src={awardIcon} alt="Troféu" />
       </div>
     </nav>
   );

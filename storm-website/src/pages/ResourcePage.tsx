@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 
 interface PageContent {
     title: string;
@@ -42,8 +42,8 @@ const pages: Record<PageKey, PageContent> = {
 };
 
 const videoLinks = [
-    "https://www.youtube.com/embed/RP--GmNYCy8?si=JZbTyKtia0KNGR-i",
     "https://www.youtube.com/embed/9yqWcRT4wTI?si=mpfp1pJANwVsGHQY",
+    "https://www.youtube.com/embed/RP--GmNYCy8?si=JZbTyKtia0KNGR-i",
     "https://www.youtube.com/embed/zSTSgdeaSRM?si=crASnxBNw3C4hSZt",
     "https://www.youtube.com/embed/_uZAr-cmpdo?si=j5qpXL56EhVIW9HA",
     "https://www.youtube.com/embed/CrGKU6ItORI?si=nPelQ0bk06IhmLtZ",
@@ -71,7 +71,7 @@ const ResourcePage = () => {
 
     return (
         <div className="min-h-screen bg-roxo text-white flex flex-col items-center justify-center p-6">
-            <div className="bg-purple-100 text-roxo w-3/5 p-8 rounded-lg shadow-lg flex flex-col items-center">
+            <div className="bg-white text-roxo w-3/5 p-8 rounded-lg shadow-lg flex flex-col items-center">
                 <div className="flex space-x-4 mb-6">
                     {(Object.keys(pages) as Array<keyof typeof pages>).map((key) => (
                         <button
@@ -87,7 +87,7 @@ const ResourcePage = () => {
                     ))}
                 </div>
 
-                <div className="text-center w-full p-6 border rounded-lg bg-purple-100">
+                <div className="text-center w-full p-6 border rounded-lg bg-white">
                     <h1 className="text-2xl font-extrabold mb-4">{pages[activePage].title}</h1>
                     <p className="text-lg">{pages[activePage].content}</p>
                     <a
@@ -108,8 +108,8 @@ const ResourcePage = () => {
                     </a>
                 </div>
             </div>
-            <div className="bg-white text-purple-900 w-4/5 p-8 rounded-lg shadow-lg flex flex-col items-center mt-6">
-                <h2 className="text-2xl font-extrabold mb-4">Fala Tempestade</h2>
+            <div className="bg-white text-roxo w-4/5 p-8 rounded-lg shadow-lg flex flex-col items-center mt-6">
+                <h2 className="text-3xl font-extrabold mb-4">Fala Tempestade</h2>
                 <Swiper
                     modules={[Navigation]}
                     spaceBetween={30}
