@@ -55,15 +55,15 @@ export default function Homepage() {
 
       <div className="text-center bg-white py-10">
         <h1 className="text-4xl md:text-6xl lg:text-9xl font-bold">
-          IN THE <span className="text-roxo">NEWS!</span>x
+          IN THE <span className="text-roxo">NEWS!</span>
         </h1>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-10 mt-10">
-          <YouTube videoId="zSTSgdeaSRM" className="w-4/5 md:w-1/2 max-w-sm" />
-          <YouTube videoId="_uZAr-cmpdo" className="w-4/5 md:w-1/2 max-w-sm" />
+        <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:space-x-10 mt-10">
+            <YouTube videoId="zSTSgdeaSRM" />
+            <YouTube videoId="_uZAr-cmpdo" />
         </div>
       </div>
 
-      <div className="bg-roxo py-10">
+      <div className="bg-roxo py-2">
         <h1 className="text-center text-4xl md:text-6xl lg:text-8xl font-black text-white">
           PARCEIROS:
         </h1>
@@ -80,7 +80,7 @@ export default function Homepage() {
                 <img
                   src={item.image}
                   alt="Parceiro"
-                  className="w-32 mx-auto rounded-md mb-5"
+                  className="w-64 mx-auto rounded-md mb-5"
                 />
               </SwiperSlide>
             ))}

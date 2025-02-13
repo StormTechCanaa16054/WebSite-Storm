@@ -2,18 +2,18 @@ import awardIcon from "../assets/TrofeuSt.svg";
 import TeamMember from "../components/TeamMember";
 import TimeLine from "../components/TimelineItem";
 
-import ArthurIcon from "../assets/Members/Foto Artur.png";
-import FernandoQIcon from "../assets/Members/Foto Fernando.png";
+import ArthurIcon from "../assets/Members/IconArthur.png";
+import FernandoQIcon from "../assets/Members/IconFernando.png";
 import DianaIcon from "../assets/Members/Foto_Diana.png";
-import ArturIcon from "../assets/Members/Foto Artur.png";
-import GasparIcon from "../assets/Members/Foto Gaspar.png";
-import GabrielIcon from "../assets/Members/Foto gabriel.png";
-import BeatrizIcon from "../assets/Members/Foto beatriz.png";
-import DaviIcon from "../assets/Members/Foto davi.png";
-import IsabelaIcon from "../assets/Members/Foto Isabella.png";
-import JoaoIcon from "../assets/Members/Foto Fernando.png";
+import ArturIcon from "../assets/Members/IconArtur.png";
+import GasparIcon from "../assets/Members/IconGaspar.png";
+import GabrielIcon from "../assets/Members/IconGabriel.png";
+import BeatrizIcon from "../assets/Members/IconBeatriz.png";
+import DaviIcon from "../assets/Members/IconDavi.png";
+import IsabelaIcon from "../assets/Members/IconIsabella.png";
+import JoaoIcon from "../assets/Members/IconJoão.png";
 import FernandoMIcon from "../assets/Members/Foto Fernando_tec.png";
-import SofiaIcon from "../assets/Members/Foto sofia.png";
+import SofiaIcon from "../assets/Members/IconSofia.png";
 
 import RoverRuckus from "../assets/Seasons/RoverRuckus.png";
 import SkyStone from "../assets/Seasons/SkyStone.png";
@@ -21,7 +21,7 @@ import UltimateGoal from "../assets//Seasons/UltimateGoal.png";
 import FreightFrenzy from "../assets/Seasons/FreighFrenzy.png";
 import PowerPlay from "../assets/Seasons/PowerPlay.png";
 import CenterStage from "../assets/Seasons/CenterStage.png";
-import IntoTheDeep from "../assets/Seasons/IntoTheDeep.png";
+import IntoTheDeep from "../assets/Seasons/stormintothedeep.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
@@ -38,6 +38,19 @@ interface Season {
   seasonName: string;
   photo: string;
 }
+
+const awards = [
+  { name: "Inspire Award", role: "7x" },
+  { name: "Aliança Finalista", role: "2x" },
+  { name: "Top Ranked Team Award", role: "1x" },
+  { name: "Think Award", role: "1" },
+  { name: "Aliança Vencedora", role: "2x" },
+  { name: "Motivate Award", role: "1x" },
+  { name: "Control Award", role: "1x" },
+  { name: "Compasss Award", role: "1x" },
+];
+
+
 
 const seasons: Season[] = [
   { seasonName: "ROVER RUCKUS (2018/19)", photo: RoverRuckus },
@@ -80,53 +93,57 @@ function AboutUsPage() {
         </span>
       </div>
 
-      {/* Técnicos */}
-      <section className="w-full max-w-screen-lg mx-auto mb-12 text-center">
-        <h2 className="text-4xl text-white font-bold mb-6">Técnicos</h2>
-        <div className="flex justify-center flex-wrap gap-8">
+      <section>
+        <div className="flex justify-center flex-wrap gap-8 text-roxo">
           {technicalTeam.map((member, index) => (
-            <div
-              key={index}
-              className="bg-gray-900 rounded-xl p-6 shadow-lg flex flex-col items-center w-64"
-            >
-              <img
-                src={member.photo}
-                alt={member.name}
-                className="w-28 h-28 rounded-full shadow-md object-cover mb-4"
-              />
-              <h3 className="text-white font-bold text-xl">{member.name}</h3>
-              <p className="text-purple-400 text-lg font-medium">{member.role}</p>
-            </div>
+            <TeamMember key={index} name={member.name} role={member.role} photo={member.photo} />
+
           ))}
         </div>
       </section>
 
-      <section className="w-full max-w-screen-lg mx-auto text-center">
+      <section className="">
         <h2 className="text-4xl text-white font-bold mb-6">Equipe</h2>
-        <div className="flex justify-center flex-wrap gap-8">
+        <div className="flex justify-center flex-wrap gap-8 text-roxo">
           {teamMembers.map((member, index) => (
             <TeamMember key={index} name={member.name} role={member.role} photo={member.photo} />
           ))}
         </div>
       </section>
 
-      <div className="bg-roxo text-white p-10 mt-16">
-        <h1 className="font-black text-8xl text-center mb-10">LINHA DO TEMPO:</h1>
+      <div className="bg-roxo">
+        <div className="text-white p-10 mt-16">
+          <h1 className="font-black text-8xl text-center mb-10">LINHA DO TEMPO:</h1>
 
-        <Swiper
-          modules={[Pagination, Autoplay]}
-          spaceBetween={20}
-          slidesPerView={3}
-          loop={true}
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
-          className="w-full max-w-6xl mx-auto"
-        >
-          {seasons.map((season, index) => (
-            <SwiperSlide key={index}>
-              <TimeLine photo={season.photo} seasonName={season.seasonName} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={3}
+            loop={true}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            className="w-full max-w-6xl mx-auto"
+          >
+            {seasons.map((season, index) => (
+              <SwiperSlide key={index}>
+                <TimeLine photo={season.photo} seasonName={season.seasonName} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* <h1 className="flex justify-center text-white font-black text-8xl mt-32 mb-20">PREMIAÇÕES:</h1>
+        <section className="py-10 flex justify-start">
+          <div className="max-w-6xl w-full flex">
+            <div className="grid grid-cols-2 gap-80 flex-grow ml-14 md:ml-16 lg:ml-20">
+              {awards.map((award, index) => (
+                <div key={index} className="text-5xl font-extrabold text-white whitespace-nowrap">
+                  {award.name} ({award.role})
+                </div>
+              ))}
+            </div>
+            <img src={awardIcon} alt="Award Icon" className="w-4/5 ml-32" />
+          </div>
+        </section> */}
       </div>
     </nav>
   );
